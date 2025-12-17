@@ -24,6 +24,12 @@ public class Main {
         System.out.println();
 
         System.out.println("ağacın yüksekliği: " + bst.height(bst.root));
+        System.out.println("eleman sayısı: " + bst.size(bst.root));
+        System.out.println("max eleman: " +bst.findMax(bst.root));
+        System.out.println(" max depth: " +bst.findDepth(bst.root) );
 
+        System.out.println( bst.search(bst.root,10)) ;
+
+        System.out.println(bst.findMin(bst.root));
     }
 }
