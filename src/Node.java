@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
-
 public class Node {
+    Node right,left;
+    int data;
+
+    public Node(int data) {
+        this.data = data;
+        right=null;
+        left=null;
+    }
 }
