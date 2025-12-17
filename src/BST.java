@@ -1,3 +1,4 @@
+
 public class BST {
     Node root;
 
@@ -5,7 +6,7 @@ public class BST {
         root = null;
     }
 
-    Node newNode(int data) { // Bu metodun amacı verilen data değeriyle yeni bir düğüm (Node) oluşturmak ve bu düğümü ağacın kökü (root) yapmak.
+    Node var(int data) { // Bu metodun amacı verilen data değeriyle yeni bir düğüm (Node) oluşturmak ve bu düğümü ağacın kökü (root) yapmak.
         root = new Node(data);
         return root;
     }
@@ -18,7 +19,7 @@ public class BST {
                 root.right = insert(root.right, data);
             }
         } else {
-            root = newNode(data);
+            root = var(data);
         }
         return  root;
     }
@@ -43,6 +44,17 @@ public class BST {
             postOrder(root.left);
             postOrder(root.right);
             System.out.print(root.data + "  ");
+        }
+    }
+
+
+     int height(Node root){
+        if(root==null){
+            return  -1;
+        } else{
+            int lefth = height(root.left);
+            int righth=height(root.right);
+            return Math.max(lefth,righth) +1;
         }
     }
 }
