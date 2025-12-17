@@ -32,8 +32,10 @@ public class Main {
 
         System.out.println(bst.findMin(bst.root));
 
-        bst.root=bst.delete(bst.root,20);
-        bst.inOrder(bst.root);
+        bst.root=bst.delete(bst.root,8);
+
+
+
 
     }
 }

@@ -1,9 +1,13 @@
+import javax.xml.namespace.QName;
+
 public class BST {
     Node root;
 
-    public BST() {
+    public BST() { //constructor
         root = null;
     }
+
+
 
     Node var(int data) { // Bu metodun amacı verilen data değeriyle yeni bir düğüm (Node) oluşturmak ve bu düğümü ağacın kökü (root) yapmak.
         root = new Node(data);
@@ -105,7 +109,6 @@ public class BST {
     Node search(Node root, int data) {
         if(root == null ){
             return null;
-
         }
         if ( root.data == data) {
             return root;
@@ -140,7 +143,7 @@ public class BST {
             root.right=delete(root.right,data);
             return root;
         }else{
-            if(root.left==null && null == root.right){
+            if(root.left==null &&  root.right==null){
                 return  null;
             } else if (root.left==null) {
                 return root.right;
@@ -153,19 +156,51 @@ public class BST {
                 return root;
             }
      }
+     }
+
+
+
+   /* // Insert fonksiyonu
+    Node insertname(Node root, String name) {
+        if (name == null) return root; // null güvenliği
+
+        if (root == null) {
+            return new Node(name);
+        }
+
+        if (name.compareTo(root.name) < 0) {
+            root.left = insertname(root.left, name);
+        } else if (name.compareTo(root.name) > 0) {
+            root.right = insertname(root.right, name);
+        }
+        // Aynı isim varsa ekleme yapma
+        return root;
+    }
+
+    // Inorder traversal (alfabetik)
+    void inordername(Node root) {
+        if (root != null) {
+            inordername(root.left);
+            System.out.print(root.name + " ");
+            inordername(root.right);
+        }
+    }
+
+    // Search fonksiyonu
+    Node searchname(Node root, String name) {
+        if (root == null || name == null) return null;
+
+        if (root.name.equals(name)) return root;
+
+        if (name.compareTo(root.name) < 0) {
+            return searchname(root.left, name);
+        } else {
+            return searchname(root.right, name);
+        }*/
+    }
 
 
 
 
- }
 
 
-
-
-
-
-
-
-
-
-}
