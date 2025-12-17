@@ -132,7 +132,34 @@ public class BST {
 
     }
 
+ Node delete(Node root,int data){
+        if(root==null){
+            return null;
+        }if(root.data>data){
+            root.left=delete(root.left,data);
+            return root;
+     }else if(root.data<data){
+            root.right=delete(root.right,data);
+            return root;
+        }else{
+            if(root.left==null && null == root.right){
+                return  null;
+            } else if (root.left==null) {
+                return root.right;
+            } else if (root.right==null) {
+                return root.left;
+            }else{
+                int max=findMax(root.left);
+                root.data=max;
+                root.left=delete(root.left,max);
+                return root;
+            }
+     }
 
+
+
+
+ }
 
 
 
