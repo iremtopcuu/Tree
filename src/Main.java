@@ -13,7 +13,12 @@ public class Main {
         System.out.println("kökün solu: " + bst.root.left.data);
         System.out.println("kökün sağı: " + bst.root.right.data);
 
+        System.out.println("PREORDER");
         bst.preOrder(bst.root);
+        System.out.println("\nINORDER        ");
+        bst.inOrder(bst.root);
+        System.out.println("\n POSTORDER       ");
+        bst.postOrder(bst.root);
 
     }
 }
