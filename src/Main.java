@@ -34,6 +34,8 @@ public class Main {
 
         bst.root=bst.delete(bst.root,8);
         bst.inOrder(bst.root);
+        System.out.println();
+        bst.postOrder(bst.root);
 
 
 
