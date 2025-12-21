@@ -33,7 +33,7 @@ public class Main {
 
         System.out.println( bst.search(bst.root,10)) ;
 
-        System.out.println(bst.findMin(bst.root));
+        System.out.println("min değerr: " + bst.findMin(bst.root));
 
         bst.root=bst.delete(bst.root,8);
         bst.inOrder(bst.root);
