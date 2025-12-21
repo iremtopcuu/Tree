@@ -1,6 +1,6 @@
 
 public class BST {
-    Node root;
+    Node root;  //root ilk düğüm ,kaybetmememiz gerekir
 
     public BST() { //constructor
         root = null;
@@ -119,10 +119,10 @@ public class BST {
 
 
     int findMin(Node root){
-        Node current=root;
-        while(current.left!=null){
-            current=current.left;
-        }return current.data;
+
+        while(root.left!=null){
+            root=root.left;
+        }return root.data;
 
     }
 
@@ -136,13 +136,13 @@ public class BST {
             root.right=delete(root.right,data);
             return root;
         }else{
-            if(root.left==null &&  root.right==null){
+            if(root.left==null &&  root.right==null){ //tek node var
                 return  null;
-            } else if (root.left==null) {
+            } else if (root.left==null) { //sadece sağ çocuk var
                 return root.right;
-            } else if (root.right==null) {
+            } else if (root.right==null) { //sadece sol çocuk var
                 return root.left;
-            }else{
+            }else{  //iki çocuklu
                 int max=findMax(root.left);
                 root.data=max;
                 root.left=delete(root.left,max);

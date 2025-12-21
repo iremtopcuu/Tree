@@ -17,10 +17,13 @@ public class Main {
 
         System.out.println("PREORDER");
         bst.preOrder(bst.root);
+
         System.out.println("\nINORDER        ");
         bst.inOrder(bst.root);
+
         System.out.println("\n POSTORDER       ");
         bst.postOrder(bst.root);
+
         System.out.println();
 
         System.out.println("ağacın yüksekliği: " + bst.height(bst.root));
